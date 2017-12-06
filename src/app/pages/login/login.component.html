@@ -1,0 +1,60 @@
+<section fxLayout="column" fxLayoutAlign="space-between stretch" >
+
+        <div fxFlex.sm="32" fxFlex.xs="36" fxFlex.md="38" fxLayout="column" fxLayoutAlign="end center">
+            <header>
+                <figure>
+                    <img src="./assets/pages/login/img/login-global-english-logo.png" />
+                </figure>
+                <div class="appname-container" text-center>
+                    <span>{{ appName }}</span>
+                </div>
+            </header>
+        </div>
+
+        <div fxFlex.sm="56" fxFlex.xs="54" fxFlex.md="52" fxLayoutAlign="center strech">
+            <form (ngSubmit) = "login(name, password)" 
+                    >
+                  
+                <div fxFlex>
+                    <div class="login-ge">
+                        <div color="white" floating>
+                            Username
+                        </div>
+                        <input ngModel="username"
+                                   name = "username"
+                                   required >
+                    </div>
+                    <div class="login-ge">
+                        <div color="white" floating>
+                            Password
+                        </div>
+                        <input  type        = "password"
+                                    ngModel = "password"
+                                    name        = "userpassword"
+                                    required >
+                    </div>
+                    <div class="login-btn-container">
+                    <button ion-button
+                            class       ="ge-btn default large"
+                            type        = "submit"
+                            block
+                            [disabled]  = "!loginForm.form.valid  || isMakingLoginRequest">
+                        Login
+                    </button>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+
+        <div fxFlex.sm="12" fxFlex.xs="10" fxFlex.md="10" fxLayout="column" fxLayoutAlign="end">
+            <footer>
+                <div text-center (click)="troubleWithLogin()">
+                    <span class="medium-text">Problemas</span>
+                </div>
+            </footer>
+        </div>
+
+    </section>
+    
+

@@ -1,0 +1,1 @@
+export { pageRoutes, pages } from './pages.model';
